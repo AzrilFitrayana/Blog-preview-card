@@ -1,0 +1,126 @@
+/* - Yellow: hsl(47, 88%, 63%)
+
+- White: hsl(0, 0%, 100%)
+
+- Gray 500: hsl(0, 0%, 42%)
+- Gray 950: hsl(0, 0%, 7%) */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "figtree", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: hsl(47, 88%, 63%);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 384px;
+  height: 522px;
+  border-radius: 10px;
+  background-color: hsl(0, 0%, 100%);
+  border: 2px solid hsl(0, 0%, 42%);
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 1);
+  transition: all 0.2s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 15px 15px 0 rgba(0, 0, 0, 1);
+}
+
+.card img {
+  width: 336px;
+  height: 200px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 336px;
+  gap: 1rem;
+  font-weight: 500;
+  font-size: 16px;
+  color: hsl(0, 0%, 42%);
+  transition: all 0.2s ease-in-out;
+}
+
+.content span,
+h2 {
+  color: hsl(0, 0%, 7%);
+}
+
+.content span {
+  font-size: 14px;
+}
+
+.content h2 {
+  font-weight: 800;
+}
+
+.card:hover h2 {
+  color: hsl(47, 88%, 63%);
+}
+
+.category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 82px;
+  height: 29px;
+  font-weight: 800;
+  font-size: 14px;
+  border-radius: 4px;
+  color: hsl(0, 0%, 7%);
+  background-color: hsl(47, 88%, 63%);
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  color: hsl(0, 0%, 7%);
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.profile img {
+  width: 40px;
+  height: 40px;
+}
+
+@media screen and (max-width: 375px) {
+  .card {
+    width: 327px;
+    height: 501px;
+  }
+
+  .card img {
+    width: 279px;
+  }
+
+  .content {
+    width: 279px;
+    height: 200px;
+    gap: 0.5rem;
+  }
+
+  .profile img {
+    width: 32px;
+    height: 32px;
+  }
+}
